@@ -10,19 +10,14 @@
   list-style-type:disc!important;
   margin-left:15px;
     }
-    .fit{
-        padding-left: 4%;
-        padding-right: 4%;
-        width: 100%;
-    }
 </style>
 
 <title>SPR | About</title>
 <body>
-    <div class="fit">
     <h2 align="center">
         Phone Repair for College Students
     </h2>
+    <div class="fit">
         <br>
         <p>
             Getting your phone repaired is as simple as 1, 2, 3, 4.<br>
