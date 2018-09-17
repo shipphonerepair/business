@@ -1,0 +1,50 @@
+{{extend 'layout.mobile.html'}}
+<style>
+        .fit{
+        padding-left: 4%;
+        padding-right: 4%;
+        width: 100%;
+    }
+
+    table, tr, td{
+        padding-left: 4%;
+        padding-right: 4%;
+        width: 100%;
+    }
+</style>
+<title>SPR | Request Recieved</title>
+<body>
+    <div class="fit">
+        The following form has been received:<br>
+        <table>
+            <tr>
+                <td>Name:</td>
+                <td>{{=received[0]}} {{=received[1]}}</td>
+            </tr>
+                <tr>
+                <td>Phone Number:</td>
+                <td>{{=received[2]}}</td>
+            </tr>
+                <tr>
+                <td>Email:</td>
+                <td>{{=received[3]}}</td>
+            </tr>
+                <tr>
+                <td>Phone Model:</td>
+                <td>{{=received[4]}}</td>
+            </tr>
+                <tr>
+                <td>Spare Phone:</td>
+                <td>{{=received[5]}}</td>
+            </tr>
+                <tr>
+                <td>Price:</td>
+                <td>{{=received[6]}}</td>
+            </tr>
+        </table>
+        <br>
+        I'll be in contact with you soon to confirm the details. Thank you.<br>
+        &nbsp - Josh
+        </p>
+    </div>
+</body>

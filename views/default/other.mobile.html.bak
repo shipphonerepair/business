@@ -1,0 +1,235 @@
+{{extend 'layout.mobile.html'}}
+
+<style>
+    .padding_top{
+        padding-top: 1em;
+    }
+
+    .icon{
+        width:20px;
+        height:20px;
+    }
+
+    .wordWrap{
+        width: 100%;
+        text-align: justify;
+        padding-left: 4%;
+        padding-right: 4%;
+    }
+
+    .submit_button{
+        text-align: right;
+    }
+
+    input{
+        width: 150px;
+        height: 25px;
+    }
+
+    .price{
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /* Outer */
+    .popup {
+        width:100%;
+        height:100%;
+        display:none;
+        position:fixed;
+        top:0px;
+        left:0px;
+        background:rgba(0,0,0,0.75);
+    }
+
+    /* Inner */
+    .popup-inner {
+        max-width:700px;
+        width:90%;
+        padding:40px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        -webkit-transform:translate(-50%, -50%);
+        transform:translate(-50%, -50%);
+        box-shadow:0px 2px 6px rgba(0,0,0,1);
+        border-radius:3px;
+        background:#fff;
+    }
+
+    /* Close Button */
+    .popup-close {
+        width:30px;
+        height:30px;
+        padding-top:4px;
+        display:inline-block;
+        position:absolute;
+        top:0px;
+        right:0px;
+        transition:ease 0.25s all;
+        -webkit-transform:translate(50%, -50%);
+        transform:translate(50%, -50%);
+        border-radius:1000px;
+        background:rgba(0,0,0,0.8);
+        font-family:Arial, Sans-Serif;
+        font-size:20px;
+        text-align:center;
+        line-height:100%;
+        color:#fff;
+    }
+
+    .popup-close:hover {
+        -webkit-transform:translate(50%, -50%) rotate(180deg);
+        transform:translate(50%, -50%) rotate(180deg);
+        background:rgba(0,0,0,1);
+        text-decoration:none;
+    }
+
+    .popup-text{
+        text-align: justify;
+
+    }
+
+    .popup-title{
+        text-align: center;
+    }
+
+    table, tr, td{
+        padding-left: 4%;
+        padding-right: 4%;
+        width: 100%;
+    }
+
+    .inline{
+    display:inline;
+    }
+
+    .closeButton{
+        text-align: right;
+    }
+</style>
+
+<title>SPR | Battery Replacement</title>
+<body>
+    <div class>
+        <p class="wordWrap">
+            Request a repair on your iPhone (or Android) that isn't a screen or battery, such as a home button. Fill out this repair request form and I'll get back to you with pricing information.<br><br>
+
+            <b>Note:</b> Before your screen is ordered, you will received a text/email confirming the details of the order aswell to schedule meetup times/locations.
+            Look under <a href='contact'>contact me</a> if you have any questions or concerns.<br>
+        </p>
+    </div>
+    <div>
+        {{=form.custom.begin}}
+        <table>
+            <tr>
+                <td>
+                    <p class="label">
+                        <b>First Name:</b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                            {{=form.custom.widget.first_name}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="label">
+                        <b>Last Name:</b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                            {{=form.custom.widget.last_name}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="label">
+                        <b>Phone Number:</b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                            {{=form.custom.widget.phone_number}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="label">
+                        <b>Email:</b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                            {{=form.custom.widget.email}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                        <p class="label inline">
+                            <b>Phone Model:</b>
+                        </p>
+                         <div  class="inline">
+                            <img class="icon"  data-popup-open="popup-1" href="#"  align="right" src="{{=URL('static', 'images', args='questionMark.png')}}" />
+                        </div>
+                        <div class="popup" data-popup="popup-1">
+                            <div class="popup-inner">
+                                <h2 class="popup-title">Phone Model</h2>
+                                <p class="popup-text">The phone model is engraved on the back of the phone. Double-check the model, as the <b>exact</b> model is required.
+                                    Even if the replacement parts are the same size, they are often different internally and installing the wrong part may permanently damage your phone.</p>
+                                <p class="closeButton"><a data-popup-close="popup-1" href="#">Close</a></p>
+                            </div>
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    {{=form.custom.widget.phone_model}}
+                </td>
+            </tr>
+                <script>
+                    $(function() {
+                        //----- OPEN
+                        $('[data-popup-open]').on('click', function(e) {
+                            var targeted_popup_class = jQuery(this).attr('data-popup-open');
+                            $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+
+                            e.preventDefault();
+                        });
+
+                        //----- CLOSE
+                        $('[data-popup-close]').on('click', function(e) {
+                            var targeted_popup_class = jQuery(this).attr('data-popup-close');
+                            $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+
+                            e.preventDefault();
+                        });
+                    });
+                </script>
+            <tr>
+                <td>
+                    <p class="label">
+                        <b>Repair Request:</b>
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+          {{=form.custom.widget.request}}
+                </td>
+            </tr>
+            <tr>
+                <td class="submit_button">
+                                {{=form.custom.submit}}
+                </td>
+            </tr>
+        </table>
+        {{=form.custom.end}}
+    </div>
+</body>

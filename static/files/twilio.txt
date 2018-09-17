@@ -1,0 +1,28 @@
+from twilio.rest import Client
+
+# configure twilio client auth
+account_sid = 'AC52989d7a6fbd65c8c87cfd3bf57f9533'
+auth_token = '7a267c7c45d70aaac9eb55b8c610280a'
+client = Client(account_sid, auth_token)
+
+
+def fixPhone(number):
+    digitNumber = []
+    for letter in number:
+        if (letter).isdigit():
+            digitNumber.append(letter)
+    digitNumber = "".join(digitNumber)
+
+    # 4946466
+    if len(digitNumber) == 7:
+        return("+1717" + digitNumber)
+
+    # 7174946466
+    if len(digitNumber) == 10:
+        return("+1" + digitNumber)
+
+    # 17174946466
+    if len(digitNumber) == 11:
+        return ("+" + digitNumber)
+    #twilioNumber = fixPhone(db().select(db.post.phone_number).last().phone_number)
+    #execution = client.studio.flows('FW04e8d15cb5d7c559615bc6921720ab8c').executions.create(to=twilioNumber, from_='+17174155503')

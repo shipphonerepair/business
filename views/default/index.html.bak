@@ -1,0 +1,46 @@
+{{extend 'layout.html'}}
+
+<style>
+
+    .orderedList li {
+  margin-left:30px;
+    }
+
+    .unorderedList li {
+  list-style-type:disc!important;
+  margin-left:15px;
+    }
+   .fit{
+        padding-right: 5px;
+        width: 100%;
+    }
+</style>
+
+<title>SPR | About</title>
+<body>
+    <h2 align="center">
+        Phone Repair for College Students
+    </h2>
+    <div class="fit">
+    <p>
+        Ship Phone Repair prides itself on providing cheap phone repairs with as little hassle as possible.
+        Getting your phone repaired is as simple as 1, 2, 3, 4.<br>
+        <ol class="orderedList">
+            <li>Complete the online form for either a <a href='screen'>screen repair</a>, <a href='battery'>battery replacement</a>, or <a href='other'>other repair</a> (No payment commitment required.)</li>
+            <li>Receive a text confirming the details of the order and scheduling the day to have your phone repaired.</li>
+            <li>On the day of the repair, you'll receive Ship Phone Repair's complimentary iPhone 6 while your phone is repaired so you have 0 downtime without a phone.</li>
+            <li>When the repair is completed, you'll received a text on the iPhone 6 to meetup and pick your phone back up.</li>
+        </ol>
+    Special accomodations can be made by <a href='contact'>contacting me</a>, otherwise, the meetup location is in the Starbuck's Cafe directly to the left in the Shippensburg University Library.
+    </p>
+        <p>
+        <b>Technician Qualifications:</b><br>
+        <ul class="unorderedList">
+          <li>40+ successful phone repairs</li>
+          <li>CompTIA A+ Certified</li>
+          <li>OSHA Certified</li>
+          <li>SkillsUSA I.T. National Finalist</li>
+    </ul>
+    </p>
+</div>
+</body>

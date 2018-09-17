@@ -1,0 +1,91 @@
+timestamp: 2018-09-09T11:56:01.235539
+CREATE TABLE "post"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "first_name" CHAR(512),
+    "last_name" CHAR(512),
+    "email" CHAR(512),
+    "phone_number" CHAR(512),
+    "phone_model" CHAR(512),
+    "phone_screen_color" CHAR(512),
+    "spare_phone" CHAR(512),
+    "price" CHAR(512),
+    "notes" TEXT
+);
+success!
+timestamp: 2018-09-09T11:56:01.393203
+CREATE TABLE "comment"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "comment" TEXT
+);
+success!
+timestamp: 2018-09-10T03:36:26.276076
+CREATE TABLE "postBattery"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "first_name" CHAR(512),
+    "last_name" CHAR(512),
+    "email" CHAR(512),
+    "phone_number" CHAR(512),
+    "phone_model" CHAR(512),
+    "spare_phone" CHAR(512),
+    "price" CHAR(512),
+    "notes" TEXT
+);
+success!
+timestamp: 2018-09-10T04:01:56.973549
+CREATE TABLE "postOther"(
+    "id" INTEGER PRIMARY KEY AUTOINCREMENT,
+    "first_name" CHAR(512),
+    "last_name" CHAR(512),
+    "email" CHAR(512),
+    "phone_number" CHAR(512),
+    "phone_model" CHAR(512),
+    "request" TEXT
+);
+success!
+timestamp: 2018-09-16T12:31:40.227024
+ALTER TABLE "post" ADD "date" DATE;
+timestamp: 2018-09-16T12:31:40.311038
+ALTER TABLE "post" ADD "time" CHAR(512);
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!
+success!

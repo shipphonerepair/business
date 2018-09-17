@@ -1,0 +1,254 @@
+{{extend 'layout.html'}}
+
+<style>
+    .padding_top{
+        padding-top: 1em;
+    }
+
+    .icon{
+        width:20px;
+        height:20px;
+    }
+
+    .wordWrap{
+        width: 38em;
+        text-align: justify;
+    }
+
+    .submit_button{
+        text-align: right;
+    }
+
+    input{
+        width: 150px;
+        height: 25px;
+    }
+
+    .tooltip1 {
+    position: relative;
+}
+
+    .tooltip1 .tooltiptext1 {
+        visibility: hidden;
+        width: 18em;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 5px;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        top: -110px;
+        left: 125%;
+    }
+
+    .tooltip1 .tooltiptext1::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+    .tooltip1:hover .tooltiptext1 {
+        visibility: visible;
+    }
+
+    .tooltip2 {
+    position: relative;
+}
+
+    .tooltip2 .tooltiptext2 {
+        visibility: hidden;
+        width: 18em;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 5px;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        top: -148px;
+        left: 125%;
+    }
+
+    .tooltip2 .tooltiptext2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+    .tooltip2:hover .tooltiptext2 {
+        visibility: visible;
+    }
+
+    .tooltip3 {
+    position: relative;
+}
+
+    .tooltip3 .tooltiptext3 {
+        visibility: hidden;
+        width: 18em;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 5px;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        top: -72px;
+        left: 125%;
+    }
+
+    .tooltip3 .tooltiptext3::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent black transparent transparent;
+}
+
+    .tooltip3:hover .tooltiptext3 {
+        visibility: visible;
+    }
+
+</style>
+
+<title>Phone Repair</title>
+<body>
+    <div class="padding_top">
+        <p class="wordWrap">
+            Hello!<br>
+            This page serves as a convenient way to help me keep track of phone repair orders.
+            Submitting this form doesn't obligate you to anything, it just helps me keep track of orders and minimize the amount of time you go without your phone.
+            I will text/email you before ordering your screen to make sure I have the correct details and to arrange a time to fix your phone (typically a day.)
+            Look under <a href='contact'>contact me</a> if you have any questions or something on the form isn't working.<br>
+            V/r,<br>
+            Josh
+        </p>
+    </div>
+    <div>
+        {{=form.custom.begin}}
+        <table>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Name:</b>
+                    </p>
+                </td>
+                <td width="400">
+                            {{=form.custom.widget.name}}
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Phone Number:</b>
+                    </p>
+                </td>
+                <td width="400">
+                            {{=form.custom.widget.phone_number}}
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Email:</b>
+                    </p>
+                </td>
+                <td width="400">
+                            {{=form.custom.widget.email}}
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Phone Model:</b>
+                    </p>
+                </td>
+                <td width="400">
+                           {{=form.custom.widget.phone_model}}
+                </td>
+                <td width="27">
+                    <div class="tooltip1">
+                        <img class="icon" align="right" src="{{=URL('static', 'images', args='questionMark.png')}}" />
+                        <p class="tooltiptext1">The phone model is engraved on the back of the phone. Please double check the model, as the <b>exact</b> model is required. Please double check your phone to see if it's an "s" or not. Even if the screens are the same size, they are very different internally and putting the wrong screen on will permanently damage your phone.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Phone Screen Color:</b>
+                    </p>
+                </td>
+                <td width="400">
+                             {{=form.custom.widget.phone_screen_color}}
+                </td>
+                <td width="27">
+                    <div class="tooltip2">
+                        <img class="icon" align="right" src="{{=URL('static', 'images', args='questionMark.png')}}" />
+                            <p class="tooltiptext2">Screen color doesn't refer to the "space grey" or "rose gold," but the color of your home button.<br>Additionally, while you can have the opposite color screen installed, to reduce costs on your end, the home button is transferred from one screen to the other. In my experience, black home buttons with white screens and vice versa often are a little loose. I will try to remove wiggle if it has any, but just a heads up.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Spare Phone:</b>
+                    </p>
+                </td>
+                <td width="400">
+                             {{=form.custom.widget.spare_phone}}
+                </td>
+                <td width="27">
+                    <div class="tooltip3">
+                        <img class="icon" align="right" src="{{=URL('static', 'images', args='questionMark.png')}}" />
+                            <p class="tooltiptext3">If you select yes, I'll give you an old iPhone for the day I'm repairing your phone so you don't go without a phone. This also allows me to keep in contact to return your phone once the repair is done.</p>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Estimated Price:</b>
+                    </p>
+                </td>
+                <td width="400">
+                            {{=form.custom.widget.price}}
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Notes (optional):</b>
+                    </p>
+                </td>
+                <td width="400">
+                        {{=form.custom.widget.notes}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td class="submit_button">
+                                {{=form.custom.submit}}
+                </td>
+            </tr>
+        </table>
+        <div>
+        </div>
+        {{=form.custom.end}}
+    </div>
+</body>

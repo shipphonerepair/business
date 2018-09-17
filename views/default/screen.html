@@ -1,0 +1,314 @@
+{{extend 'layout.html'}}
+
+<style>
+    .padding_top{
+        padding-top: 1em;
+    }
+
+    .icon{
+        margin-top: 10px;
+        width:20px;
+        height:20px;
+        cursor: pointer;
+    }
+
+    .wordWrap{
+        width: 38em;
+        text-align: justify;
+    }
+
+    .submit_button{
+        text-align: right;
+    }
+
+    input{
+        width: 150px;
+        height: 25px;
+    }
+
+    .price{
+        text-align: center;
+        font-weight: bold;
+    }
+
+    /* Outer */
+    .popup {
+        width:100%;
+        height:100%;
+        display:none;
+        position:fixed;
+        top:0px;
+        left:0px;
+        background:rgba(0,0,0,0.75);
+    }
+
+    /* Inner */
+    .popup-inner {
+        max-width:700px;
+        width:90%;
+        padding:40px;
+        position:absolute;
+        top:50%;
+        left:50%;
+        -webkit-transform:translate(-50%, -50%);
+        transform:translate(-50%, -50%);
+        box-shadow:0px 2px 6px rgba(0,0,0,1);
+        border-radius:3px;
+        background:#fff;
+    }
+
+    /* Close Button */
+    .popup-close {
+        width:30px;
+        height:30px;
+        padding-top:4px;
+        display:inline-block;
+        position:absolute;
+        top:0px;
+        right:0px;
+        transition:ease 0.25s all;
+        -webkit-transform:translate(50%, -50%);
+        transform:translate(50%, -50%);
+        border-radius:1000px;
+        background:rgba(0,0,0,0.8);
+        font-family:Arial, Sans-Serif;
+        font-size:20px;
+        text-align:center;
+        line-height:100%;
+        color:#fff;
+    }
+
+    .popup-close:hover {
+        -webkit-transform:translate(50%, -50%) rotate(180deg);
+        transform:translate(50%, -50%) rotate(180deg);
+        background:rgba(0,0,0,1);
+        text-decoration:none;
+    }
+
+    .popup-text{
+        text-align: justify;
+
+    }
+
+    .popup-title{
+        text-align: center;
+    }
+
+
+    .inline{
+    display:inline;
+    }
+
+    .closeButton{
+        text-align: right;
+    }
+
+</style>
+<title>SPR | Screen Repair</title>
+<body>
+    <div>
+        <p class="wordWrap font">
+            <b>Note:</b> Before your screen is ordered, you will received a text confirming the details of the order along with to schedule a time to meet at the Starbuck's in the Shippensburg University Library.
+            Look under <a href='contact'>contact me</a> if you have any questions or concerns.<br>
+        </p>
+    </div>
+    <div>
+        {{=form.custom.begin}}
+        <table>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>First Name:</b>
+                    </p>
+                </td>
+                <td width="400">
+                            {{=form.custom.widget.first_name}}
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Last Name:</b>
+                    </p>
+                </td>
+                <td width="400">
+                            {{=form.custom.widget.last_name}}
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Phone Number:</b>
+                    </p>
+                </td>
+                <td width="400">
+                            {{=form.custom.widget.phone_number}}
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Email:</b>
+                    </p>
+                </td>
+                <td width="400">
+                            {{=form.custom.widget.email}}
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Phone Model:</b>
+                    </p>
+                </td>
+                <td width="400">
+                           {{=form.custom.widget.phone_model}}
+                </td>
+                <td width="27">
+                        <div>
+                            <img class="icon"  data-popup-open="popup-1" href="#"  align="right" src="{{=URL('static', 'images', args='questionMark.png')}}" />
+                        </div>
+                        <div class="popup" data-popup="popup-1">
+                            <div class="popup-inner">
+                                <h2 class="popup-title">Phone Model</h2>
+                                <p class="popup-text">The phone model is engraved on the back of the phone. Double-check the model, as the <b>exact</b> model is required. Even if the screens are the same size,
+                                    they are very different internally and putting the wrong screen on may permanently damage your phone.</p>
+                                <p class="closeButton"><a data-popup-close="popup-1" href="#">Close</a></p>
+                            </div>
+                        </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Phone Screen Color:</b>
+                    </p>
+                </td>
+                <td width="400">
+                             {{=form.custom.widget.phone_screen_color}}
+                </td>
+                <td width="27">
+                    <div>
+                        <img class="icon"  data-popup-open="popup-2" href="#"  align="right" src="{{=URL('static', 'images', args='questionMark.png')}}" />
+                    </div>
+                    <div class="popup" data-popup="popup-2">
+                        <div class="popup-inner">
+                            <h2 class="popup-title">Phone Model</h2>
+                            <p class="popup-text">Color of the bezel of the screen, not the back of the phone (Home button color.)</p>
+                            <p class="closeButton"><a data-popup-close="popup-2" href="#">Close</a></p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Spare Phone:</b>
+                    </p>
+                </td>
+                <td width="400">
+                             {{=form.custom.widget.spare_phone}}
+                </td>
+                <td width="27">
+                    <div>
+                        <img class="icon"  data-popup-open="popup-3" href="#"  align="right" src="{{=URL('static', 'images', args='questionMark.png')}}" />
+                    </div>
+                    <div class="popup" data-popup="popup-3">
+                        <div class="popup-inner">
+                            <h2 class="popup-title">Phone Model</h2>
+                            <p class="popup-text">Ship Phone Repair lends out an iPhone 6 during the day of your phone repair for convenience.
+                                The phone will always be wiped on return, so no need to worry about signing out of social media accounts. This phone can also be used to contact you when the phone repair is done.</p>
+                            <p class="closeButton"><a data-popup-close="popup-3" href="#">Close</a></p>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <script>
+                $(function() {
+                    //----- OPEN
+                    $('[data-popup-open]').on('click', function(e) {
+                        var targeted_popup_class = jQuery(this).attr('data-popup-open');
+                        $('[data-popup="' + targeted_popup_class + '"]').fadeIn(350);
+
+                        e.preventDefault();
+                    });
+
+                    //----- CLOSE
+                    $('[data-popup-close]').on('click', function(e) {
+                        var targeted_popup_class = jQuery(this).attr('data-popup-close');
+                        $('[data-popup="' + targeted_popup_class + '"]').fadeOut(350);
+
+                        e.preventDefault();
+                    });
+                });
+            </script>
+            <tr>
+                <td>
+                    <br>
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Price:</b>
+                    </p>
+                </td>
+
+                <td width="400">
+                    <p class="price">
+                    <form method="post">
+                        <input name="price" class="priceData" readonly="readonly">
+                    </form>
+                    </p>
+                    <script>
+                    var chargemaster = [40, 40, 45, 45, 45, 45, 50, 50, 55, 55, 60, 60, 60, 65]
+                    $(".priceData").val("$ 0")
+                    jQuery(document).ready(function(){
+                       jQuery('#post_phone_model').change(function(){
+                           var model = jQuery('#post_phone_model').val();
+                           if(model == 'iPhone 4'){$(".priceData").val("$ " + chargemaster[0])}
+                           else if(model == 'iPhone 4S'){$(".priceData").val("$ " + chargemaster[1])}
+                           else if(model == 'iPhone 5'){$(".priceData").val("$ " + chargemaster[2])}
+                           else if(model == 'iPhone 5C'){$(".priceData").val("$ " + chargemaster[3])}
+                           else if(model == 'iPhone 5S'){$(".priceData").val("$ " + chargemaster[4])}
+                           else if(model == 'iPhone SE'){$(".priceData").val("$ " + chargemaster[5])}
+                           else if(model == 'iPhone 6'){$(".priceData").val("$ " + chargemaster[6])}
+                           else if(model == 'iPhone 6 Plus'){$(".priceData").val("$ " + chargemaster[7])}
+                           else if(model == 'iPhone 6S'){$(".priceData").val("$ " + chargemaster[8])}
+                           else if(model == 'iPhone 6S Plus'){$(".priceData").val("$ " + chargemaster[9])}
+                           else if(model == 'iPhone 7'){$(".priceData").val("$ " + chargemaster[10])}
+                           else if(model == 'iPhone 7 Plus'){$(".priceData").val("$ " + chargemaster[11])}
+                           else if(model == 'iPhone 8'){$(".priceData").val("$ " + chargemaster[12])}
+                           else if(model == 'iPhone 8 Plus'){$(".priceData").val("$ " + hargemaster[13])}
+                           else{
+                               $(".priceData").val("$ 0")
+                           }
+                           jQuery('#post_price').val("model");
+                        });
+                    });
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td width="175">
+                    <p class="label">
+                        <b>Notes (optional):</b>
+                    </p>
+                </td>
+                <td width="400">
+                        {{=form.custom.widget.notes}}
+                </td>
+            </tr>
+            <tr>
+                <td>
+                </td>
+                <td class="submit_button">
+                                {{=form.custom.submit}}
+                </td>
+            </tr>
+        </table>
+        <div>
+        </div>
+        {{=form.custom.end}}
+    </div>
+</body>

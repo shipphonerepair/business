@@ -1,0 +1,65 @@
+{{extend 'layout.mobile.html'}}
+<style>
+        .fit{
+        padding-left: 4%;
+        padding-right: 4%;
+        width: 100%;
+    }
+    .infoName{
+        padding-left: 2%;
+        padding-right: 4%;
+        width: 100%;
+        white-space: nowrap;
+    }
+
+    .info{
+        padding-left: 4%;
+        padding-right: 6%;
+        vertical-align:bottom;
+        word-wrap:break-word;
+    }
+    table{
+        table-layout:fixed;
+    }
+</style>
+<title>SPR | Request Recieved</title>
+<body>
+    <div class="fit">
+        The following form has been received:<br>
+        <table>
+            <tr>
+                <td class="infoName">Name:</td>
+                <td class="info">{{=received[0]}} {{=received[1]}}</td>
+            </tr>
+                <tr>
+                <td class="infoName">Number:</td>
+                <td class="info">{{=received[2]}}</td>
+            </tr>
+                <tr>
+                <td class="infoName">Email:</td>
+                <td class="info">{{=received[3]}}</td>
+            </tr>
+                <tr>
+                <td class="infoName">Model:</td>
+                <td class="info">{{=received[4]}}</td>
+            </tr>
+                <tr>
+                <td class="infoName">Screen Color:</td>
+                <td class="info">{{=received[5]}}</td>
+            </tr>
+                <tr>
+                <td class="infoName">Spare Phone:</td>
+                <td class="info">{{=received[6]}}</td>
+            </tr>
+            </tr>
+                <tr>
+                <td class="infoName">Price:</td>
+                <td class="info">{{=received[7]}}</td>
+            </tr>
+        </table>
+        <br>
+        I'll be in contact with you soon to confirm the details. Thank you.<br>
+        &nbsp - Josh
+        </p>
+    </div>
+</body>

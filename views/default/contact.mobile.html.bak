@@ -1,0 +1,75 @@
+{{extend 'layout.mobile.html'}}
+
+<style>
+
+    img{
+        height:150px;
+        width: 150px;
+    }
+
+    .submit_button{
+        text-align: right;
+    }
+
+    .fit{
+        padding-left: 4%;
+        padding-right: 4%;
+        width: 100%;
+    }
+
+    table, tr, td{
+        padding-left: 4%;
+        padding-right: 4%;
+        width: 100%;
+    }
+
+    .orderedList li {
+  list-style-type:disc!important;
+  margin-left:15px;
+    }
+
+</style>
+
+<title>SPR | Contact Me</title>
+<body>
+    <div class="fit">
+        <p>
+            Don't hesitate to contact me with comments/questions.<br>
+            Feel free to contact me through any of the methods below.<br>
+        </p>
+        <p>
+            <b>Snapchat:</b> shipphonerepair or scan the Snapcode below.<br><br>
+            <img src="{{=URL('static', 'images', args='snapchat.png')}}" /><br><br>
+            <b>Phone:</b> (717) 494-6466<br>
+            <b>Email:</b> shipphonerepair@gmail.com
+        </p>
+        <p>
+            Also, I'm always looking for improvments for this website so please feel free to leave me any comments, suggestions, or complaints below.<br>
+        </p>
+        <div>
+            {{=form.custom.begin}}
+            <table>
+                <tr>
+                    <td>
+                        <p>
+                            <b>Comment/Suggestion:</b>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        {{=form.custom.widget.comment}}
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="submit_button">
+                            {{=form.custom.submit}}
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            {{=form.custom.end}}
+        </div>
+    </div>
+</body>
