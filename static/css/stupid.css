@@ -3,6 +3,7 @@
   Stupid.css is what the names says, take it with a grain of salt
   License: BSD
 ************/
+header a {color: white; font-size:1.1em}
 
 /*** basic styles ***/
 html {box-sizing:border-box;}
