@@ -1,35 +1,5 @@
 {{extend 'layout.mobile.html'}}
 
-<style>
-
-    img{
-        height:150px;
-        width: 150px;
-    }
-
-    .submit_button{
-        text-align: right;
-    }
-
-    .fit{
-        padding-left: 4%;
-        padding-right: 4%;
-        width: 100%;
-    }
-
-    table, tr, td{
-        padding-left: 4%;
-        padding-right: 4%;
-        width: 100%;
-    }
-
-    .orderedList li {
-  list-style-type:disc!important;
-  margin-left:15px;
-    }
-
-</style>
-
 <title>SPR | Contact Me</title>
 <body>
     <div class="fit">

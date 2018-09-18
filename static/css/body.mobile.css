@@ -33,8 +33,7 @@ table, tr, td{
     }
 
     .snapchat{
-        height:150px;
-        width: 150px;
+        width: 96%;
     }
 
     .unorderedList li {
@@ -58,7 +57,9 @@ table, tr, td{
     }
 
     .wordWrap{
-        width: 38em;
+        padding-left: 4%;
+        padding-right: 4%;
+        width: 100%;
         text-align: justify;
     }
 
@@ -148,7 +149,7 @@ table, tr, td{
     }
 
     .prices{
-        width: 95%;
+        width: 100%;
     }
     .prices tr:nth-child(odd) {
         background-color: #f2f2f2
@@ -158,10 +159,12 @@ table, tr, td{
     }
 
     .prices td{
-        text-align: right;
-        padding-right: 10px;
+        width: 33%;
+        text-align: center;
         vertical-align:middle;
     }
-    .prices.header{
-        text-align: center;
+    p{
+        width: 100%;
+        padding-left: 4%;
+        padding-right: 4%;
     }

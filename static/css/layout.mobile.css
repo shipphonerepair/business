@@ -1,0 +1,58 @@
+header {
+    -webkit-box-shadow: 0 0 8px 2px #000;
+    -moz-box-shadow: 0 0 8px 2px #000;
+    box-shadow: 0 0 8px 2px #000;
+    margin-bottom: 10px;
+    }
+
+    .footer-text{
+        text-align: center;
+        margin: 1em auto;
+        color: white;
+    }
+
+    .centralContainer{
+        position: static; /* keeps container same place, no matter if scrolled or content resized*/
+        width: 100%; /* makes it fill the whole page so it can be centered */
+        padding-top: 1em; /* static offset from top */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .nameContainer{
+        width: 96%;
+        background-color: #ffffff;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-radius: 5px;
+        color: #000000;
+        text-align: center;
+    }
+
+    .name{
+        font-size: 30px;
+        letter-spacing: 1px;
+        color: #2992b2;
+    }
+
+    .contentContainer{
+        width: 96%;
+        background-color: #ffffff;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-radius: 5px;
+        color: #000000;
+        justify-content: center;
+        margin: 2em 0em;
+    }
+
+    body{
+    font-family: Ubuntu, "times new roman", times, roman, serif;
+    }
+
+    .menuIcon{
+        height: 20px;
+        width: 30px;
+    }
