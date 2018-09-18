@@ -1,14 +1,12 @@
 from gluon.contrib.user_agent_parser import mobilize
 import smtplib
 
-@mobilize
 def screen():
     form = SQLFORM(db.post, record=None)
     if form.process().accepted:
         redirect(URL('received'))
     return dict(form=form)
 
-@mobilize
 def received():
     fromaddr = 'shipphonerepair@gmail.com'
     toaddrs  = 'shipphonerepair@gmail.com'
@@ -43,14 +41,13 @@ def received():
                           db().select(db.post.phone_screen_color).last().phone_screen_color,
                           db().select(db.post.spare_phone).last().spare_phone,
                           db().select(db.post.price).last().price))
-@mobilize
+
 def battery():
     form = SQLFORM(db.postBattery, record=None)
     if form.process().accepted:
         redirect(URL('receivedBattery'))
     return dict(form=form)
 
-@mobilize
 def receivedBattery():
     fromaddr = 'shipphonerepair@gmail.com'
     toaddrs  = ['shipphonerepair@gmail.com', db().select(db.post.email).last().email]
@@ -83,14 +80,13 @@ def receivedBattery():
                           db().select(db.postBattery.phone_model).last().phone_model,
                           db().select(db.postBattery.spare_phone).last().spare_phone,
                           db().select(db.postBattery.price).last().price))
-@mobilize
+
 def other():
     form = SQLFORM(db.postOther, record=None)
     if form.process().accepted:
         redirect(URL('otherReceived'))
     return dict(form=form)
 
-@mobilize
 def otherReceived():
     fromaddr = 'shipphonerepair@gmail.com'
     toaddrs  = ['shipphonerepair@gmail.com', db().select(db.post.email).last().email]
@@ -121,17 +117,14 @@ def otherReceived():
                           db().select(db.postOther.phone_model).last().phone_model,
                           db().select(db.postOther.request).last().request))
 
-@mobilize
 def contact():
     form = SQLFORM(db.comment, record=None, formstyle='table2cols')
     if form.process().accepted:
         response.flash = 'Thank you for your feedback!'
     return dict(form=form)
 
-@mobilize
 def index():
     return dict()
 
-@mobilize
 def prices():
     return dict()
