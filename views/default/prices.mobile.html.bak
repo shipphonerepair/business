@@ -3,7 +3,7 @@
 <style>
 
     table{
-        width: 96%;
+        width: 95%;
         border-radius: 6px;
     }
     tr:nth-child(odd) {
