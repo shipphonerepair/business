@@ -1,9 +1,70 @@
 <!DOCTYPE html>
+
 <style>
-    .background{
+
+    header {
+    -webkit-box-shadow: 0 0 8px 2px #000;
+    -moz-box-shadow: 0 0 8px 2px #000;
+    box-shadow: 0 0 8px 2px #000;
+    margin-bottom: 10px;
+}
+
+    .center_footer_text{
+        text-align: center;
+        margin: 1em auto;
+        color: white;
+    }
+
+    .backgroundImage{
      /*   background-color: #297db2;*/
         background-image: url("{{=URL('static', 'images', args='background.png')}}");
         background-size: cover;
+    }
+
+    .mainContainer{
+        position: static; /* keeps container same place, no matter if scrolled or content resized*/
+        width: 100%; /* makes it fill the whole page so it can be centered */
+        padding-top: 1em; /* static offset from top */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .nameContainer{
+        width: 96%;
+        background-color: #ffffff;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-radius: 5px;
+        color: #000000;
+        text-align: center;
+    }
+
+    .contentContainer{
+        width: 96%;
+        background-color: #ffffff;
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-radius: 5px;
+        color: #000000;
+        justify-content: center;
+        margin: 2em 0em; /* margin between name and content container */
+    }
+
+    body {
+    font-family: Ubuntu, "times new roman", times, roman, serif;
+    }
+
+    .name{
+        font-size: 30px;
+        letter-spacing: 1px;
+        color: #297db2;
+    }
+
+    .menuIcon{
+        height: 20px;
+        width: 30px;
     }
 </style>
 
@@ -39,8 +100,8 @@
       {{=response.flash}}
     </div>
     {{pass}}
-    <body class="background">
-        <div class="centralContainer">
+    <body class="backgroundImage">
+        <div class="mainContainer">
             <div class="nameContainer">
                 <span class="name"><b>Ship Phone Repair</b></span>
             </div>
