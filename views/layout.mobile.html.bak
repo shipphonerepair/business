@@ -15,7 +15,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <link href="{{=URL('static','css/web2py.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{=URL('static','css/outline.css')}}" rel="stylesheet" type="text/css"/>
-    <link href="{{=URL('static','css/layout.css')}}" rel="stylesheet" type="text/css"/>
+    <link href="{{=URL('static','css/layout.mobile.css')}}" rel="stylesheet" type="text/css"/>
     <link href="{{=URL('static','css/body.mobile.css')}}" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="{{=URL('static','css/bootstrap.min.css')}}"/>
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin">

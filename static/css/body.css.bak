@@ -140,3 +140,7 @@
     .prices.header{
         text-align: center;
     }
+
+    p{
+        padding-right: 4%;
+}

@@ -1,114 +1,11 @@
 {{extend 'layout.html'}}
 
-<style>
-    .padding_top{
-        padding-top: 1em;
-    }
-
-    .icon{
-        margin-top: 10px;
-        width:20px;
-        height:20px;
-        cursor: pointer;
-    }
-
-    .wordWrap{
-        width: 38em;
-        text-align: justify;
-    }
-
-    .submit_button{
-        text-align: right;
-    }
-
-    input{
-        width: 150px;
-        height: 25px;
-    }
-
-    .price{
-        text-align: center;
-        font-weight: bold;
-    }
-
-    /* Outer */
-    .popup {
-        width:100%;
-        height:100%;
-        display:none;
-        position:fixed;
-        top:0px;
-        left:0px;
-        background:rgba(0,0,0,0.75);
-    }
-
-    /* Inner */
-    .popup-inner {
-        max-width:700px;
-        width:90%;
-        padding:40px;
-        position:absolute;
-        top:50%;
-        left:50%;
-        -webkit-transform:translate(-50%, -50%);
-        transform:translate(-50%, -50%);
-        box-shadow:0px 2px 6px rgba(0,0,0,1);
-        border-radius:3px;
-        background:#fff;
-    }
-
-    /* Close Button */
-    .popup-close {
-        width:30px;
-        height:30px;
-        padding-top:4px;
-        display:inline-block;
-        position:absolute;
-        top:0px;
-        right:0px;
-        transition:ease 0.25s all;
-        -webkit-transform:translate(50%, -50%);
-        transform:translate(50%, -50%);
-        border-radius:1000px;
-        background:rgba(0,0,0,0.8);
-        font-family:Arial, Sans-Serif;
-        font-size:20px;
-        text-align:center;
-        line-height:100%;
-        color:#fff;
-    }
-
-    .popup-close:hover {
-        -webkit-transform:translate(50%, -50%) rotate(180deg);
-        transform:translate(50%, -50%) rotate(180deg);
-        background:rgba(0,0,0,1);
-        text-decoration:none;
-    }
-
-    .popup-text{
-        text-align: justify;
-
-    }
-
-    .popup-title{
-        text-align: center;
-    }
-
-
-    .inline{
-    display:inline;
-    }
-
-    .closeButton{
-        text-align: right;
-    }
-
-</style>
 <title>SPR | Screen Repair</title>
 <body>
     <div>
         <p class="wordWrap font">
-            <b>Note:</b> Before your screen is ordered, you will received a text confirming the details of the order along with to schedule a time to meet at the Starbuck's in the Shippensburg University Library.
+            This page is for those looking for a screen repair on their phone. By filling out this form, it simply helps me better keep track of orders, allowing me to get the parts for your phone faster.
+            After you submit the form, I'll be in contact with you to find the best time for me to replace your screen.
             Look under <a href='contact'>contact me</a> if you have any questions or concerns.<br>
         </p>
     </div>
