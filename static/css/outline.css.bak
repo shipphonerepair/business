@@ -79,10 +79,15 @@ input:invalid, input.error, textarea:invalid, textarea.error {background: #ffdfd
 .menu ul ul {top:0; left:80%; z-index:1100}
 .menu li:hover > ul {visibility:visible; opacity:1}
 
+/* aligns elements once view converts to mobile */
+@media all and (max-width:69em) {
+  header .menu li, header .menu ul {width: 100%}
+  header .menu.right {float:left; text-align:left}
+  header .menu ul ul {top:2.5em; left:-1px}
+}
 
-
-/* sets up page for mobile view */
-@media all and (min-width:600px) {
+/* sets up page normally */
+@media all and (min-width:70em) {
   .ham {display:none!important}
   .burger.accordion * {max-height:1000px; overflow:visible}
 }
@@ -103,9 +108,6 @@ a:not(.btn):not(.noeffect):after {
   transition:width 0.2s;
 }
 
-/*** colors from http://clrs.cc/ ***/
-.navy{background-color:#001f3f;color:white}.blue{background-color:#0074d9;color:white}.aqua{background-color:#7fdbff;color:#111111}.teal{background-color:#39cccc;color:white}.olive{background-color:#3d9970;color:white}.green{background-color:#2ecc40;color:white}.aquamarine{background-color:#2992b2;color:white}.lime{background-color:#01ff70;color:#111111}.yellow{background-color:#ffdc00;color:#111111}.orange{background-color:#ff851b;color:white}.red{background-color:#cc1f00;color:white}.fuchsia{background-color:#f012be;color:white}.pink{background-color:#ee6e73;color:white}.purple{background-color:#b10dc9;color:white}.maroon{background-color:#85144b;color:white}.white{background-color:#fff;color:#111111;-webkit-box-shadow:inset 0px 0px 0px 1px #ddd;-moz-box-shadow:inset 0px 0px 0px 1px #ddd;box-shadow:inset 0px 0px 0px 1px #ddd}.gray{background-color:#aaa;color:white}.silver{background-color:#f1f1f1;color:#111111}.black{background-color:#111111;color:white}.glass{background:rgba(255,255,255,0.5);color:#111111}
-
 /*** accordion ***/
 .accordion>label{cursor:pointer}
 .accordion>input ~ label:before {content:"\25b2"; color:#ddd}
@@ -124,4 +126,28 @@ a:not(.btn):not(.noeffect):after {
   padding: 0;
   -webkit-transition: max-height .3s ease-out;
   transition: max-height .3s ease-out;
+}
+
+/*** colors from http://clrs.cc/ ***/
+.navy{background-color:#001f3f;color:white}.blue{background-color:#0074d9;color:white}.aqua{background-color:#7fdbff;color:#111111}.teal{background-color:#39cccc;color:white}.olive{background-color:#3d9970;color:white}.green{background-color:#2ecc40;color:white}.aquamarine{background-color:#2992b2;color:white}.lime{background-color:#01ff70;color:#111111}.yellow{background-color:#ffdc00;color:#111111}.orange{background-color:#ff851b;color:white}.red{background-color:#cc1f00;color:white}.fuchsia{background-color:#f012be;color:white}.pink{background-color:#ee6e73;color:white}.purple{background-color:#b10dc9;color:white}.maroon{background-color:#85144b;color:white}.white{background-color:#fff;color:#111111;-webkit-box-shadow:inset 0px 0px 0px 1px #ddd;-moz-box-shadow:inset 0px 0px 0px 1px #ddd;box-shadow:inset 0px 0px 0px 1px #ddd}.gray{background-color:#aaa;color:white}.silver{background-color:#f1f1f1;color:#111111}.black{background-color:#111111;color:white}.glass{background:rgba(255,255,255,0.5);color:#111111}
+
+/* makes only text input highlight on hover */
+tbody tr:hover {background-color:transparent}
+
+/* removes ugly bottom of tables */
+tbody tr {border-bottom: none}
+
+.menu .web2py-menu-active a {
+    color: #2992b2
+}
+
+/* submit button effects */
+.btn:hover,
+a.noeffect img:hover {
+    transition: scale .5s;
+    transform: scale(1.05);
+}
+.btn,
+a.noeffect img {
+    transition: all .2s ease-in-out;
 }

@@ -1,0 +1,20 @@
+/* makes only text input highlight on hover */
+tbody tr:hover {background-color:transparent}
+
+/* removes ugly bottom of tables */
+tbody tr {border-bottom: none}
+
+.menu .web2py-menu-active a {
+    color: #2992b2
+}
+
+/* submit button effects */
+.btn:hover,
+a.noeffect img:hover {
+    transition: scale .5s;
+    transform: scale(1.05);
+}
+.btn,
+a.noeffect img {
+    transition: all .2s ease-in-out;
+}

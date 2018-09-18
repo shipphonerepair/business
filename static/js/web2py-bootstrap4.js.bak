@@ -63,7 +63,7 @@
       });
     });
   }
-/*
+
   $(function() {
     $(".nav ul.dropdown-menu").each(function() {
       var toggle = jQuery(this).parent();
@@ -78,5 +78,5 @@
       };
     });
   });
-*/
+
 })(jQuery);

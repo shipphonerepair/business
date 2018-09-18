@@ -1,6 +1,5 @@
 from gluon.contrib.user_agent_parser import mobilize
 import smtplib
-import os
 
 @mobilize
 def screen():

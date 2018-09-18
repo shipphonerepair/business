@@ -1,12 +1,9 @@
 {{extend 'layout.html'}}
-<style>
-td{
-    width: 12em;
-}
-</style>
+
+<title>SPR | Request Recieved</title>
 <br>
 The following form has been received:<br>
-<table>
+<table class="received">
     <tr>
         <td>Name:</td>
         <td>{{=received[0]}} {{=received[1]}}</td>
