@@ -1,33 +1,10 @@
 {{extend 'layout.mobile.html'}}
-<style>
-        .fit{
-        padding-left: 4%;
-        padding-right: 4%;
-        width: 100%;
-    }
 
-    .infoName{
-        padding-left: 2%;
-        padding-right: 4%;
-        width: 100%;
-        white-space: nowrap;
-    }
-
-    .info{
-        padding-left: 4%;
-        padding-right: 6%;
-        vertical-align:bottom;
-        word-wrap:break-word;
-    }
-    table{
-        table-layout:fixed;
-    }
-</style>
 <title>SPR | Request Recieved</title>
 <body>
     <div class="fit">
         The following form has been received:<br>
-        <table>
+        <table class="received">
             <tr>
                 <td class="infoName">Name:</td>
                 <td class="info">{{=received[0]}} {{=received[1]}}</td>
