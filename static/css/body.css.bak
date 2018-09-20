@@ -142,5 +142,5 @@
     }
 
     p{
-        padding-right: 4%;
+        width: 90%;
 }
