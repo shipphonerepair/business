@@ -4,7 +4,7 @@
 <body>
     <div class>
         <p class="wordWrap">
-            This page is for those looking for a battery replacement in their phone. By filling out this form, it simply helps me better keep track of orders, allowing me to get the parts for your phone faster.
+            This page is for those looking for a battery replacement in their phone. By filling out this form, it simply helps me better keep track of your order, allowing me to get the parts for your phone faster.
             After you submit the form, I'll be in contact with you to find the best time for me to replace your battery.
             Look under <a href='contact'>contact me</a> if you have any questions or concerns.<br>
         </p>
@@ -136,27 +136,28 @@
                     </form>
                     </p>
                     <script>
-                    var chargemaster = [20, 20, 20, 25, 25, 30, 30, 30, 30, 35, 35, 35, 35, 40]
+                    var chargemaster = [0, 20, 20, 20, 25, 25, 30, 30, 30, 30, 35, 35, 35, 35, 40]
                     $(".priceData").val("$ 0")
                     jQuery(document).ready(function(){
                        jQuery('#postBattery_phone_model').change(function(){
                            var model = jQuery('#postBattery_phone_model').val();
-                           if(model == 'iPhone 4'){$(".priceData").val("$ " + chargemaster[0])}
-                           else if(model == 'iPhone 4S'){$(".priceData").val("$ " + chargemaster[1])}
-                           else if(model == 'iPhone 5'){$(".priceData").val("$ " + chargemaster[2])}
-                           else if(model == 'iPhone 5C'){$(".priceData").val("$ " + chargemaster[3])}
-                           else if(model == 'iPhone 5S'){$(".priceData").val("$ " + chargemaster[4])}
-                           else if(model == 'iPhone SE'){$(".priceData").val("$ " + chargemaster[5])}
-                           else if(model == 'iPhone 6'){$(".priceData").val("$ " + chargemaster[6])}
-                           else if(model == 'iPhone 6 Plus'){$(".priceData").val("$ " + chargemaster[7])}
-                           else if(model == 'iPhone 6S'){$(".priceData").val("$ " + chargemaster[8])}
-                           else if(model == 'iPhone 6S Plus'){$(".priceData").val("$ " + chargemaster[9])}
-                           else if(model == 'iPhone 7'){$(".priceData").val("$ " + chargemaster[10])}
-                           else if(model == 'iPhone 7 Plus'){$(".priceData").val("$ " + chargemaster[11])}
-                           else if(model == 'iPhone 8'){$(".priceData").val("$ " + chargemaster[12])}
-                           else if(model == 'iPhone 8 Plus'){$(".priceData").val("$ " + hargemaster[13])}
+                           if(model == 'iPhone 4'){$(".priceData").val("$ " + chargemaster[1])}
+                           else if(model == 'iPhone 4S'){$(".priceData").val("$ " + chargemaster[2])}
+                           else if(model == 'iPhone 5'){$(".priceData").val("$ " + chargemaster[3])}
+                           else if(model == 'iPhone 5C'){$(".priceData").val("$ " + chargemaster[4])}
+                           else if(model == 'iPhone 5S'){$(".priceData").val("$ " + chargemaster[5])}
+                           else if(model == 'iPhone SE'){$(".priceData").val("$ " + chargemaster[6])}
+                           else if(model == 'iPhone 6'){$(".priceData").val("$ " + chargemaster[7])}
+                           else if(model == 'iPhone 6 Plus'){$(".priceData").val("$ " + chargemaster[8])}
+                           else if(model == 'iPhone 6S'){$(".priceData").val("$ " + chargemaster[9])}
+                           else if(model == 'iPhone 6S Plus'){$(".priceData").val("$ " + chargemaster[10])}
+                           else if(model == 'iPhone 7'){$(".priceData").val("$ " + chargemaster[11])}
+                           else if(model == 'iPhone 7 Plus'){$(".priceData").val("$ " + chargemaster[12])}
+                           else if(model == 'iPhone 8'){$(".priceData").val("$ " + chargemaster[13])}
+                           else if(model == 'iPhone 8 Plus'){$(".priceData").val("$ " + chargemaster[14])}
+                           else if(model == ''){$(".priceData").val("$ " + chargemaster[0])}
                            else{
-                               $(".priceData").val("$ 0")
+                               $(".priceData").val("Price Error - Reload Page")
                            }
                            jQuery('#postBattery_price').val("model");
                         });
