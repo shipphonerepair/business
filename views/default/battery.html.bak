@@ -137,8 +137,10 @@
                     </p>
                     <script>
                     var chargemaster = [0, 20, 20, 20, 25, 25, 30, 30, 30, 30, 35, 35, 35, 35, 40]
-                    $(".priceData").val("$ 0")
+
                     jQuery(document).ready(function(){
+                        if(jQuery('#postBattery_phone_model').val() === 'iPhone 4'){
+                        $(".priceData").val("test");}
                        jQuery('#postBattery_phone_model').change(function(){
                            var model = jQuery('#postBattery_phone_model').val();
                            if(model == 'iPhone 4'){$(".priceData").val("$ " + chargemaster[1])}

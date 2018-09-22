@@ -159,11 +159,42 @@
                     </p>
                     <script>
                     var chargemaster = [0, 40, 40, 45, 45, 45, 45, 50, 50, 50, 55, 50, 55, 50, 55]
-                    $(".priceData").val("$ 0")
                     jQuery(document).ready(function(){
+                        if(jQuery('#post_phone_model').val() === ''){
+                            $(".priceData").val("$ 0");}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 4'){
+                            $(".priceData").val("$ " + chargemaster[1]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 4S'){
+                            $(".priceData").val("$ " + chargemaster[2]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 5'){
+                            $(".priceData").val("$ " + chargemaster[3]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 5C'){
+                            $(".priceData").val("$ " + chargemaster[4]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 5S'){
+                            $(".priceData").val("$ " + chargemaster[5]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone SE'){
+                            $(".priceData").val("$ " + chargemaster[6]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 6'){
+                            $(".priceData").val("$ " + chargemaster[7]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 6 Plus'){
+                            $(".priceData").val("$ " + chargemaster[8]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 6S'){
+                            $(".priceData").val("$ " + chargemaster[9]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 6S Plus'){
+                            $(".priceData").val("$ " + chargemaster[10]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 7'){
+                            $(".priceData").val("$ " + chargemaster[11]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 7 Plus'){
+                            $(".priceData").val("$ " + chargemaster[12]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 8'){
+                            $(".priceData").val("$ " + chargemaster[13]);}
+                        else if(jQuery('#post_phone_model').val() === 'iPhone 8 Plus'){
+                            $(".priceData").val("$ " + chargemaster[14]);}
+
                        jQuery('#post_phone_model').change(function(){
                            var model = jQuery('#post_phone_model').val();
-                           if(model == 'iPhone 4'){$(".priceData").val("$ " + chargemaster[1])}
+                           if(model == ''){$(".priceData").val("$ " + chargemaster[0])}
+                           else if(model == 'iPhone 4'){$(".priceData").val("$ " + chargemaster[1])}
                            else if(model == 'iPhone 4S'){$(".priceData").val("$ " + chargemaster[2])}
                            else if(model == 'iPhone 5'){$(".priceData").val("$ " + chargemaster[3])}
                            else if(model == 'iPhone 5C'){$(".priceData").val("$ " + chargemaster[4])}
@@ -177,9 +208,8 @@
                            else if(model == 'iPhone 7 Plus'){$(".priceData").val("$ " + chargemaster[12])}
                            else if(model == 'iPhone 8'){$(".priceData").val("$ " + chargemaster[13])}
                            else if(model == 'iPhone 8 Plus'){$(".priceData").val("$ " + chargemaster[14])}
-                           else if(model == ''){$(".priceData").val("$ " + chargemaster[0])}
                            else{
-                               $(".priceData").val("$ 0")
+                               $(".priceData").val("Price Error - Reload Page")
                            }
                            jQuery('#post_price').val("model");
                         });
